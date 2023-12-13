@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    
+
 </head>
+
 <body>
     <nav>
         <img src="img/logoaje.jpg" alt="Logo da Empresa">
@@ -17,11 +19,69 @@
         </ul>
     </nav>
 
+    <!-- ... Seu conteúdo existente ... -->
+
+    <section class="card-section">
+        <div class="card">
+            <img src="img/back.jpg" alt="Imagem do Card">
+            <img src="img/logoaje.jpg" alt="Outra Imagem">
+            <img src="img/back.jpg" alt="Imagem do Card">
+            <div class="card-text">
+                <h3>AJE Construções e Serviços</h3>
+                <p>A AJE é uma empresa fundada por Antonio Bispo, atuando como CEO, empresário e mestre de obras.
+                    A parceria estende-se aos seus dois filhos, Eduardo, que desempenha o papel de CFO e engenheiro
+                    civil,
+                    formado pela Universidade de Brasília, e Carlos Henrique, o fundador do site e estudante de
+                    Engenharia de Software na UNB,
+                    atualmente no 5º semestre. Nosso propósito é compartilhar um pouco da nossa história e trajetória.
+                </p>
+                <p>O objetivo primordial da nossa empresa é especializar-se em diversos segmentos da construção civil,
+                    abrangendo desde guaritas e reformas até a construção de residências e edifícios. Colocamos um
+                    esforço dedicado em atender nossos clientes,
+                    proporcionando-lhes não apenas segurança, mas também confiança, tanto em relação ao cliente quanto à
+                    integridade da obra em questão.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section">
+        <div class="card">
+            <img src="img/back.jpg" alt="Imagem do Card">
+            <img src="img/logoaje.jpg" alt="Outra Imagem">
+            <img src="img/back.jpg" alt="Imagem do Card">
+            <div class="card-text">
+                <h3>AJE Construções e Serviços</h3>
+                <p>A AJE é uma empresa fundada por Antonio Bispo, atuando como CEO, empresário e mestre de obras.
+                    A parceria estende-se aos seus dois filhos, Eduardo, que desempenha o papel de CFO e engenheiro
+                    civil,
+                    formado pela Universidade de Brasília, e Carlos Henrique, o fundador do site e estudante de
+                    Engenharia de Software na UNB,
+                    atualmente no 5º semestre. Nosso propósito é compartilhar um pouco da nossa história e trajetória.
+                </p>
+                <p>O objetivo primordial da nossa empresa é especializar-se em diversos segmentos da construção civil,
+                    abrangendo desde guaritas e reformas até a construção de residências e edifícios. Colocamos um
+                    esforço dedicado em atender nossos clientes,
+                    proporcionando-lhes não apenas segurança, mas também confiança, tanto em relação ao cliente quanto à
+                    integridade da obra em questão.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ... Seu conteúdo existente ... -->
+
+
+
     <footer>
         <div class="footer-content">
             <div class="left-section">
                 <p>Copyright © 2023 - AJE Construções e Serviços LTDA</p>
-                <p>Ouvidoria <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a></p>
+                <p>Ouvidoria <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a>
+                </p>
                 <p>Fale Conosco: (61) 995187814</p>
                 <p>Fale Conosco: (61) 991275665</p>
             </div>
@@ -33,13 +93,33 @@
             </div>
             <div class="right-section">
                 <p class="engenheiro">Engenheiro Civil : Eduardo De Souza Crea - DF </p>
-                <p class="engenheiro">Mestre de Obras :  Antonio Bispo Gomes </p>
-                <p class="engenheiro">Engenheiro Software :  Carlos Henrique de Souza</p>
-                
+                <p class="engenheiro">Mestre de Obras : Antonio Bispo Gomes </p>
+                <p class="engenheiro">Engenheiro Software : Carlos Henrique de Souza</p>
+
             </div>
         </div>
     </footer>
 
-    
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var footer = document.querySelector("footer");
+            var distanceFromTop = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var bodyHeight = document.body.scrollHeight;
+
+            // Adicionei uma verificação para garantir que o rodapé apareça apenas no final da página
+            if (distanceFromTop + windowHeight >= bodyHeight - 20) {
+                footer.classList.add("footer-show");
+            } else {
+                footer.classList.remove("footer-show");
+            }
+        });
+    </script>
+
+
+
+
 </body>
+
 </html>

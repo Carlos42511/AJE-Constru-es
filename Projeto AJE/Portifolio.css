@@ -8,13 +8,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    padding: 15px;
+    padding: 0px;
 }
 
 nav img {
     max-height: 200px; /* Reduzi a altura para melhor visualização */
     width: auto;
-    margin-left: 500px; /* Ajustei a margem à direita para 5px (ou ajuste conforme necessário) */
+    margin-right: 80px;
 }
 
 ul {
@@ -64,14 +64,18 @@ ul {
 
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
 
 .footer-content {
     display: flex;
@@ -111,4 +115,9 @@ a:hover {
 /* Estilo para as seções de texto */
 .footer-content p {
     margin: 10px 0; /* Ajuste a margem conforme necessário */
+}
+
+/* Adiciona classe para mostrar o footer */
+.footer-show {
+    opacity: 1;
 }

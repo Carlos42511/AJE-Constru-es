@@ -8,13 +8,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
-    padding: 15px;
+    padding: 0px;
 }
 
 nav img {
     max-height: 200px; /* Reduzi a altura para melhor visualização */
     width: auto;
-    margin-left: 500px; /* Ajustei a margem à direita para 5px (ou ajuste conforme necessário) */
+    margin-right: 80px;
 }
 
 ul {
@@ -64,13 +64,26 @@ ul {
 
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Adicione um pouco de espaço ao conteúdo principal para evitar que ele seja sobreposto pelo footer */
+.main-content {
+    margin-bottom: 80px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
+}
+
+/* Adiciona classe para mostrar o footer */
+.footer-show {
+    opacity: 1;
 }
 
 .footer-content {
@@ -80,6 +93,8 @@ footer {
     max-width: 1500px;
     margin: 0 auto;
 }
+
+
 
 .left-section {
     width: 100%;
@@ -111,4 +126,42 @@ a:hover {
 /* Estilo para as seções de texto */
 .footer-content p {
     margin: 10px 0; /* Ajuste a margem conforme necessário */
+}
+
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 120px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    max-width: 550px; /* Ajuste o valor conforme necessário */
+    height: auto;
+}
+
+.card-text {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; /* Ajuste a margem conforme necessário */
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 1rem;
 }
