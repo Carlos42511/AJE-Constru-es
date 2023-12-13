@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 15px;
+}
+
+nav img {
+    max-height: 200px; /* Reduzi a altura para melhor visualização */
+    width: auto;
+    margin-left: 500px; /* Ajustei a margem à direita para 5px (ou ajuste conforme necessário) */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 80px; /* Reduzi o espaçamento entre os itens */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #66ccff;
+}
+
+/* Centralizar os itens no meio da barra de navegação */
+ul {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Adiciona uma media query para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        align-items: center; /* Alinha os itens ao centro */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    ul {
+        margin-top: 15px; /* Adiciona um espaçamento superior entre o logo e a lista */
+        gap: 10px; /* Reduz o espaçamento entre os itens empilhados */
+    }
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.left-section {
+    width: 100%;
+}
+
+.middle-section {
+    width: 100%;
+    text-align: center;
+}
+
+.right-section {
+    width: 80%;
+    text-align: right;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #66ccff;
+}
+
+.engenheiro {
+    font-weight: bold;
+}
+
+/* Estilo para as seções de texto */
+.footer-content p {
+    margin: 10px 0; /* Ajuste a margem conforme necessário */
+}
