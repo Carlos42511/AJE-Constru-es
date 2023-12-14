@@ -51,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #000000;
+    color: rgb(5, 243, 203);
 }
 
 /* Centralizar os itens no meio da barra de navegação */
