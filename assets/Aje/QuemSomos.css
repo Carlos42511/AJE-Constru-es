@@ -77,83 +77,13 @@ ul {
 
 
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+/* Adicione ao seu CSS */
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+/* Adicione ao seu CSS */
 
-/* Adicione um pouco de espaço ao conteúdo principal para evitar que ele seja sobreposto pelo footer */
-.main-content {
-    margin-bottom: 80px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
-}
+/* Adicione ao seu CSS */
 
-/* Adiciona classe para mostrar o footer */
-.footer-show {
-    opacity: 1;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    
-}
-
-.left-section {
-    width: 100%;
-}
-
-.middle-section {
-    width: 100%;
-    text-align: center;
-}
-
-.right-section {
-    width: 100%;
-    text-align: right;
-}
-
-a {
-    color: white;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #66ccff;
-}
-
-.engenheiro {
-    font-weight: bold;
-}
-
-/* Estilo para as seções de texto */
-.footer-content p {
-    margin: 10px 0; /* Ajuste a margem conforme necessário */
-}
-
+/* Adicione ao seu CSS */
 
 .card-section {
     display: flex;
@@ -172,24 +102,49 @@ a:hover {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(216, 10, 10, 0.1);
+    width: 100%;
 }
 
 .card img {
     width: 100%;
     max-width: 450px; /* Ajuste o valor conforme necessário */
     height: auto;
-   
 }
 
-/* Adicione a fonte American Typewriter, serif */
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .card-text {
+    position: relative;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     margin-top: 10px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-style: normal;
-    font-size: 2rem; /* Ajuste o tamanho do texto conforme necessário */
+    font-size: 1.3rem; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+.card-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/QuemSomos.jpg') center/cover;
+    filter: blur(5px); /* Ajuste o valor do desfoque conforme necessário */
+    z-index: -1;
+}
+
+.card-text h3,
+.card-text p {
+    position: relative;
+    z-index: 1;
 }
 
 .card-text h3 {
@@ -201,8 +156,12 @@ a:hover {
 }
 
 .card-text p {
-    font-size: 1rem; /* Ajuste o tamanho do texto conforme necessário */
+    font-size: 1.3rem; /* Ajuste o tamanho do texto conforme necessário */
 }
+
+
+
+
 
 
 
@@ -243,23 +202,5 @@ a:hover {
         padding: 10px; /* Reduza o padding nas seções de texto */
     }
 
-    footer .footer-content {
-        flex-direction: column; /* Empilha as seções do rodapé em telas menores */
-    }
-
-    .right-section {
-        text-align: center; /* Alinhe o texto à direita para o centro */
-        width: 100%;
-        margin-top: 10px; /* Adicione uma margem superior */
-    }
 }
-
-/* Footer estilizado para dispositivos móveis */
-@media (max-width: 768px) {
-    footer {
-        position: static; /* Altere para position: static para evitar sobreposição com o conteúdo */
-        margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
-    }
-}
-
 
