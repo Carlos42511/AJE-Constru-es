@@ -82,14 +82,35 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
-    color: white;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
+/* Adicione um pouco de espaço ao conteúdo principal para evitar que ele seja sobreposto pelo footer */
+.main-content {
+    margin-bottom: 80px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
+}
+
+/* Adiciona classe para mostrar o footer */
+.footer-show {
+    opacity: 1;
+}
 
 .footer-content {
     display: flex;
@@ -97,6 +118,7 @@ footer {
     align-items: center;
     max-width: 1500px;
     margin: 0 auto;
+    
 }
 
 .left-section {
@@ -109,16 +131,16 @@ footer {
 }
 
 .right-section {
-    width: 80%;
+    width: 100%;
     text-align: right;
 }
 
-.footer-content a {
+a {
     color: white;
     text-decoration: underline;
 }
 
-.footer-content a:hover {
+a:hover {
     color: #66ccff;
 }
 
@@ -129,11 +151,6 @@ footer {
 /* Estilo para as seções de texto */
 .footer-content p {
     margin: 10px 0; /* Ajuste a margem conforme necessário */
-}
-
-/* Adiciona classe para mostrar o footer */
-.footer-show {
-    opacity: 1;
 }
 
 .portfolio {
@@ -176,4 +193,58 @@ footer {
 .portfolio-item a {
     text-decoration: none;
     color: inherit;
+}
+
+/* Seu CSS existente aqui */
+
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    nav img {
+        margin-right: 0; /* Remova a margem à direita na versão móvel */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    nav li {
+        font-size: 16px; /* Reduza o tamanho da fonte dos itens do menu */
+    }
+
+    .card-section {
+        padding: 0 20px; /* Reduza o padding nas seções de cartão */
+    }
+
+    .card {
+        margin: 0 10px; /* Adicione margem nas laterais dos cartões */
+    }
+
+    .card img {
+        max-width: 100%; /* Faça a imagem ocupar 100% da largura do contêiner */
+    }
+
+    .card-text {
+        padding: 10px; /* Reduza o padding nas seções de texto */
+    }
+
+    footer .footer-content {
+        flex-direction: column; /* Empilha as seções do rodapé em telas menores */
+    }
+
+    .right-section {
+        text-align: center; /* Alinhe o texto à direita para o centro */
+        width: 100%;
+        margin-top: 10px; /* Adicione uma margem superior */
+    }
+}
+
+/* Footer estilizado para dispositivos móveis */
+@media (max-width: 768px) {
+    footer {
+        position: static; /* Altere para position: static para evitar sobreposição com o conteúdo */
+        margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
+    }
 }

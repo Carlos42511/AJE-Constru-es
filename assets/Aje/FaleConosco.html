@@ -8,15 +8,18 @@
 </head>
 
 <body>
+
+  <div class="background"></div>
+
   <nav>
     <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
     <ul>
-        <li><a href="../../index.html"> Home</a></li>
-        <li><a href="QuemSomos.html">Quem Somos</a></li>
-        <li><a href="Portifolio.html">Portfólio</a></li>
-        <li><a href="FaleConosco.html">Fale Conosco</a></li>
+      <li><a href="../../index.html"> Home</a></li>
+      <li><a href="QuemSomos.html">Quem Somos</a></li>
+      <li><a href="Portifolio.html">Portfólio</a></li>
+      <li><a href="FaleConosco.html">Fale Conosco</a></li>
     </ul>
-</nav>
+  </nav>
 
   <div class="container">
     <div class="logo">
@@ -37,7 +40,7 @@
       <div class="form-group">
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email">
-       </div>
+      </div>
 
       <div class="form-group">
         <label for="assunto">Assunto:</label>
@@ -57,14 +60,33 @@
   </div>
 
   <script>
-    document.getElementById("meuFormulario").addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    document.getElementById("telefone").addEventListener("input", function () {
+      let telefone = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+      telefone = telefone.substring(0, 11); // Limita a 11 caracteres (limite para números de telefone)
 
-        // Adicione aqui o código para exibir uma mensagem personalizada
-        alert("O formulário foi enviado com sucesso!");
+      // Formatação do número
+      if (telefone.length >= 2) {
+        telefone =
+          "(" +
+          telefone.substring(0, 2) +
+          ") " +
+          telefone.substring(2);
+      }
 
-        // Submeta o formulário manualmente após exibir a mensagem (opcional)
-        this.submit();
+      if (telefone.length > 8) {
+        telefone =
+          telefone.substring(0, 10) +
+          "-" +
+          telefone.substring(10);
+      }
+
+      // Mensagem de aviso para letras
+      if (/[^0-9()-\s]/.test(this.value)) {
+        alert("Por favor, insira apenas números no campo de telefone.");
+        this.value = this.value.replace(/[^\d]/g, ''); // Remove caracteres não numéricos após alerta
+      } else {
+        this.value = telefone;
+      }
     });
   </script>
 

@@ -3,6 +3,20 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.background {
+  /* Adicione as propriedades de background desejadas */
+  background-image: url('../../img/faleconosco.jpg');
+  background-size: cover; /* Ajuste conforme necessário */
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Garante que o background fique por trás de outros elementos */
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -63,46 +77,88 @@ ul {
 
 
 .container {
-    width: 400px;
-    margin: 0 auto; /* Adiciona margens automáticas para centralizar horizontalmente */
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza o conteúdo dentro do .container */
+  width: 440px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do .logo */
+  height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/* Mantenha o seu CSS existente aqui */
+
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+  nav img {
+      margin-right: 0; /* Remova a margem à direita na versão móvel */
   }
-  
-  .logo img {
-    max-width: 100%;
-    height: auto;
-    max-height: 150px;
-    margin-bottom: 20px; /* Adiciona margem inferior para espaçamento entre a logo e o formulário */
+
+  nav ul {
+      flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+      gap: 10px; /* Espaçamento entre os itens */
   }
-  
+
+  nav li {
+      font-size: 16px; /* Reduza o tamanho da fonte dos itens do menu */
+  }
+
+  .container {
+      width: 90%; /* Ajuste a largura do container para ocupar 90% da largura da tela */
+      margin: 20px auto; /* Adicione uma margem para centralizar o container */
+  }
+
   .form-group {
-    margin-bottom: 15px;
+      margin-bottom: 10px; /* Reduza a margem inferior entre os grupos de formulários */
   }
 
   label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+      font-size: 16px; /* Ajuste o tamanho da fonte das labels */
   }
 
-  input, textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  input,
+  textarea {
+      padding: 10px; /* Aumente o preenchimento dos campos de entrada */
   }
+}
 
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
-  }
+/* Seu CSS existente aqui */
 
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
