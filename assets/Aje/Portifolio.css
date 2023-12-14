@@ -156,24 +156,11 @@ ul {
         padding: 10px; /* Reduza o padding nas seções de texto */
     }
 
-    footer .footer-content {
-        flex-direction: column; /* Empilha as seções do rodapé em telas menores */
-    }
 
-    .right-section {
-        text-align: center; /* Alinhe o texto à direita para o centro */
-        width: 100%;
-        margin-top: 10px; /* Adicione uma margem superior */
-    }
-}
-
-/* Footer estilizado para dispositivos móveis */
-/* Adicione essas regras no final do seu arquivo CSS */
-
-/* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
     .portfolio-item p {
         font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
+        }
     }
 }
 
