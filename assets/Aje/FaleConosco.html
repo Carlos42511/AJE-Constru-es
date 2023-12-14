@@ -59,36 +59,7 @@
     </form>
   </div>
 
-  <script>
-    document.getElementById("telefone").addEventListener("input", function () {
-      let telefone = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-      telefone = telefone.substring(0, 11); // Limita a 11 caracteres (limite para números de telefone)
 
-      // Formatação do número
-      if (telefone.length >= 2) {
-        telefone =
-          "(" +
-          telefone.substring(0, 2) +
-          ") " +
-          telefone.substring(2);
-      }
-
-      if (telefone.length > 8) {
-        telefone =
-          telefone.substring(0, 10) +
-          "-" +
-          telefone.substring(10);
-      }
-
-      // Mensagem de aviso para letras
-      if (/[^0-9()-\s]/.test(this.value)) {
-        alert("Por favor, insira apenas números no campo de telefone.");
-        this.value = this.value.replace(/[^\d]/g, ''); // Remove caracteres não numéricos após alerta
-      } else {
-        this.value = telefone;
-      }
-    });
-  </script>
 
 </body>
 

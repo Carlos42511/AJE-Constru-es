@@ -37,50 +37,6 @@
 
 
 
-    <footer>
-        <div class="footer-content">
-            <div class="left-section">
-                <p>Copyright © 2023 - AJE Construções e Serviços LTDA</p>
-                <p>Ouvidoria <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a>
-                </p>
-                <p>Fale Conosco: (61) 995187814</p>
-                <p>Fale Conosco: (61) 991275665</p>
-            </div>
-            <div class="middle-section">
-                <p><a href="index.html"> Home </a></p>
-                <p><a href="assets/Aje/QuemSomos.html"> Quem Somos </a></p>
-                <p><a href="assets/Aje/Portifolio.html"> Portfólio </a></p>
-                <p><a href="assets/Aje/FaleConosco.html"> Fale Conosco </a></p>
-            </div>
-            <div class="right-section">
-                <p class="engenheiro">Engenheiro Civil : Eduardo De Souza </p>
-                <p class="engenheiro">Mestre de Obras : Antonio Bispo Gomes </p>
-                <p class="engenheiro">Engenheiro Software : Carlos Henrique de Souza</p>
-
-            </div>
-        </div>
-    </footer>
-
-
-    <script>
-        window.addEventListener("scroll", function () {
-            var footer = document.querySelector("footer");
-            var distanceFromTop = window.scrollY;
-            var windowHeight = window.innerHeight;
-            var bodyHeight = document.body.scrollHeight;
-
-            // Adicionei uma verificação para garantir que o rodapé apareça apenas no final da página
-            if (distanceFromTop + windowHeight >= bodyHeight - 20) {
-                footer.classList.add("footer-show");
-            } else {
-                footer.classList.remove("footer-show");
-            }
-        });
-    </script>
-
-
-
-
 </body>
 
 </html>

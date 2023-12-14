@@ -13,14 +13,18 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    animation: changeBackground 20s infinite; /* 20s é a duração da animação, você pode ajustar conforme necessário */
+    animation: changeBackground 20s infinite;
+    /* 20s é a duração da animação, você pode ajustar conforme necessário */
 }
 
 @keyframes changeBackground {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         background-image: url('img/QuemSomos.jpg');
     }
+
     50% {
         opacity: 1;
         background-image: url('img/Portifolio.jpg');
@@ -36,7 +40,8 @@ nav {
 }
 
 nav img {
-    max-height: 200px; /* Reduzi a altura para melhor visualização */
+    max-height: 200px;
+    /* Reduzi a altura para melhor visualização */
     width: auto;
     margin-right: 80px;
 }
@@ -44,7 +49,8 @@ nav img {
 ul {
     list-style: none;
     display: flex;
-    gap: 80px; /* Reduzi o espaçamento entre os itens */
+    gap: 80px;
+    /* Reduzi o espaçamento entre os itens */
     margin: 0;
     padding: 0;
 }
@@ -74,95 +80,25 @@ ul {
 /* Adiciona uma media query para ajustar o layout em telas menores */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
-        align-items: center; /* Alinha os itens ao centro */
-        text-align: center; /* Centraliza o texto */
+        flex-direction: column;
+        /* Empilha os itens verticalmente em telas menores */
+        align-items: center;
+        /* Alinha os itens ao centro */
+        text-align: center;
+        /* Centraliza o texto */
     }
 
     ul {
-        margin-top: 15px; /* Adiciona um espaçamento superior entre o logo e a lista */
-        gap: 10px; /* Reduz o espaçamento entre os itens empilhados */
+        margin-top: 15px;
+        /* Adiciona um espaçamento superior entre o logo e a lista */
+        gap: 10px;
+        /* Reduz o espaçamento entre os itens empilhados */
     }
 }
 
 
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Adicione um pouco de espaço ao conteúdo principal para evitar que ele seja sobreposto pelo footer */
-.main-content {
-    margin-bottom: 80px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
-}
-
-/* Adiciona classe para mostrar o footer */
-.footer-show {
-    opacity: 1;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    
-}
-
-.left-section {
-    width: 100%;
-}
-
-.middle-section {
-    width: 100%;
-    text-align: center;
-}
-
-.right-section {
-    width: 100%;
-    text-align: right;
-}
-
-a {
-    color: white;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #66ccff;
-}
-
-.engenheiro {
-    font-weight: bold;
-}
-
-/* Estilo para as seções de texto */
-.footer-content p {
-    margin: 10px 0; /* Ajuste a margem conforme necessário */
-}
 
 
 
@@ -207,81 +143,100 @@ a:hover {
 /* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
     nav img {
-        margin-right: 0; /* Remova a margem à direita na versão móvel */
+        margin-right: 0;
+        /* Remova a margem à direita na versão móvel */
     }
 
     nav {
-        padding: 15px; /* Adicione um espaçamento interno para melhorar a usabilidade em telas menores */
+        padding: 15px;
+        /* Adicione um espaçamento interno para melhorar a usabilidade em telas menores */
     }
 
     ul {
-        gap: 10px; /* Espaçamento entre os itens */
+        gap: 10px;
+        /* Espaçamento entre os itens */
     }
 
     nav ul {
-        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
-        gap: 10px; /* Espaçamento entre os itens */
+        flex-direction: column;
+        /* Empilha os itens verticalmente em telas menores */
+        gap: 10px;
+        /* Espaçamento entre os itens */
     }
 
     nav li {
-        font-size: 16px; /* Reduza o tamanho da fonte dos itens do menu */
+        font-size: 16px;
+        /* Reduza o tamanho da fonte dos itens do menu */
     }
 
     .background {
-        background-attachment: scroll; /* Altere para scroll para permitir o movimento do background */
+        background-attachment: scroll;
+        /* Altere para scroll para permitir o movimento do background */
     }
 
     .hero-section {
-        padding: 80px 20px; /* Reduza o padding na seção de herói para telas menores */
+        padding: 80px 20px;
+        /* Reduza o padding na seção de herói para telas menores */
     }
 
     .hero-section h1 {
-        font-size: 2rem; /* Ajuste o tamanho do texto conforme necessário */
+        font-size: 2rem;
+        /* Ajuste o tamanho do texto conforme necessário */
         margin-bottom: 15px;
     }
 
     .hero-section p {
-        font-size: 1rem; /* Ajuste o tamanho do texto conforme necessário */
+        font-size: 1rem;
+        /* Ajuste o tamanho do texto conforme necessário */
         margin-bottom: 20px;
     }
 
     .cta-button {
-        padding: 8px 15px; /* Ajuste o padding do botão */
-        font-size: 0.9rem; /* Ajuste o tamanho da fonte do botão */
+        padding: 8px 15px;
+        /* Ajuste o padding do botão */
+        font-size: 0.9rem;
+        /* Ajuste o tamanho da fonte do botão */
     }
 
     .card-section {
-        padding: 0 10px; /* Reduza o padding nas seções de cartão */
-        margin-bottom: 60px; /* Ajuste conforme necessário para garantir o espaçamento adequado */
+        padding: 0 10px;
+        /* Reduza o padding nas seções de cartão */
+        margin-bottom: 60px;
+        /* Ajuste conforme necessário para garantir o espaçamento adequado */
     }
 
     .card {
-        margin: 0 10px; /* Adicione margem nas laterais dos cartões */
+        margin: 0 10px;
+        /* Adicione margem nas laterais dos cartões */
     }
 
     .card img {
-        max-width: 100%; /* Faça a imagem ocupar 100% da largura do contêiner */
+        max-width: 100%;
+        /* Faça a imagem ocupar 100% da largura do contêiner */
     }
 
     .card-text {
-        padding: 10px; /* Reduza o padding nas seções de texto */
+        padding: 10px;
+        /* Reduza o padding nas seções de texto */
     }
 
     footer {
-        position: static; /* Altere para position: static para evitar sobreposição com o conteúdo */
-        margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
+        position: static;
+        /* Altere para position: static para evitar sobreposição com o conteúdo */
+        margin-top: 20px;
+        /* Adicione uma margem superior para separar do conteúdo */
     }
 
     .footer-content {
-        flex-direction: column; /* Empilha as seções do rodapé em telas menores */
+        flex-direction: column;
+        /* Empilha as seções do rodapé em telas menores */
     }
 
     .right-section {
-        text-align: center; /* Alinhe o texto à direita para o centro */
+        text-align: center;
+        /* Alinhe o texto à direita para o centro */
         width: 100%;
-        margin-top: 10px; /* Adicione uma margem superior */
+        margin-top: 10px;
+        /* Adicione uma margem superior */
     }
 }
-
-
-
