@@ -5,7 +5,7 @@ body {
 
 .background {
     /* Adicione as propriedades de background desejadas */
-    background-image: url('../../img/background.jpg');
+    background-image: url('../../img/Portifolio.jpg');
     background-size: cover; /* Ajuste conforme necessário */
     background-position: center;
     background-attachment: fixed;
@@ -46,7 +46,7 @@ li {
 
 nav a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition: color 0.3s;
 }
 
@@ -77,82 +77,6 @@ ul {
 
 
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* Adicione um pouco de espaço ao conteúdo principal para evitar que ele seja sobreposto pelo footer */
-.main-content {
-    margin-bottom: 80px; /* Ajuste conforme necessário para garantir que o conteúdo não seja sobreposto pelo footer */
-}
-
-/* Adiciona classe para mostrar o footer */
-.footer-show {
-    opacity: 1;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    
-}
-
-.left-section {
-    width: 100%;
-}
-
-.middle-section {
-    width: 100%;
-    text-align: center;
-}
-
-.right-section {
-    width: 100%;
-    text-align: right;
-}
-
-a {
-    color: white;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #66ccff;
-}
-
-.engenheiro {
-    font-weight: bold;
-}
-
-/* Estilo para as seções de texto */
-.footer-content p {
-    margin: 10px 0; /* Ajuste a margem conforme necessário */
-}
-
 .portfolio {
     display: flex;
     flex-wrap: wrap;
@@ -182,18 +106,9 @@ a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    max-height: 200px;
+    max-height: 300px;
 }
 
-.portfolio-item p {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.portfolio-item a {
-    text-decoration: none;
-    color: inherit;
-}
 
 /* Seu CSS existente aqui */
 
@@ -248,3 +163,4 @@ a:hover {
         margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
     }
 }
+

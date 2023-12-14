@@ -5,7 +5,7 @@ body {
 
 .background {
     /* Adicione as propriedades de background desejadas */
-    background-image: url('img/pexels-akin-victor-10202856.jpg');
+    background-image: url('img/index.jpg');
     background-size: cover; /* Ajuste conforme necessário */
     background-position: center;
     background-attachment: fixed;
@@ -181,19 +181,26 @@ a:hover {
    
 }
 
+/* Adicione a fonte American Typewriter, serif */
 .card-text {
     padding: 20px;
     text-align: center;
     margin-top: 10px; /* Ajuste a margem conforme necessário */
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
+    font-style: italic;
+    font-size: 5rem; /* Ajuste o tamanho do texto conforme necessário */
 }
 
 .card-text h3 {
-    font-size: 1.5rem;
+    font-size: 3rem; /* Ajuste o tamanho do texto conforme necessário */
     margin-bottom: 10px;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-style: italic;
 }
+
+
+
 
 .card-text p {
     font-size: 1rem;
