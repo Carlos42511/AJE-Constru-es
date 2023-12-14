@@ -129,12 +129,23 @@ ul {
         font-size: 16px; /* Reduza o tamanho da fonte dos itens do menu */
     }
 
+    .portfolio-item {
+        width: calc(100% - 20px); /* Ajuste a largura para ocupar 100% da largura da tela, com uma margem de 10px em cada lado */
+    }
+
+    .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        max-height: none; /* Remova a restrição máxima de altura */
+    }
+
     .card-section {
-        padding: 0 20px; /* Reduza o padding nas seções de cartão */
+        padding: 0 10px; /* Reduza o padding nas seções de cartão */
     }
 
     .card {
-        margin: 0 10px; /* Adicione margem nas laterais dos cartões */
+        margin: 0 5px; /* Adicione margem nas laterais dos cartões */
     }
 
     .card img {
@@ -163,4 +174,3 @@ ul {
         margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
     }
 }
-
