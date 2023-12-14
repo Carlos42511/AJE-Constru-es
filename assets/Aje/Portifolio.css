@@ -168,9 +168,12 @@ ul {
 }
 
 /* Footer estilizado para dispositivos móveis */
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
-    footer {
-        position: static; /* Altere para position: static para evitar sobreposição com o conteúdo */
-        margin-top: 20px; /* Adicione uma margem superior para separar do conteúdo */
+    .portfolio-item p {
+        font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
     }
 }
+
