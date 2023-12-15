@@ -14,13 +14,11 @@
     <div class="top-bar">
         <p>Número: <a href="tel:+5561995187814">(61) 995187814</a></p>
         <p>Engenheiro Civil: Eduardo Souza </p>
-        <p>Desenvolvedor: Carlos Henrique </p>
+        
         <p>Email: <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a></p>
     </div>
 
     <nav>
-
-
         <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
         <ul>
             <li><a href="../../Index.html"> Home</a></li>
@@ -30,80 +28,92 @@
         </ul>
     </nav>
 
+    <div id="fullscreen-overlay">
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+        <button id="close-button" onclick="closeFullscreen()">VOLTAR</button>
+    </div>
+    
+
     <section class="portfolio">
-        
-        <div class="portfolio-item">
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa01.jpeg')">
             <img src="PrimeiraEtapa01.jpeg" alt="Projeto 1">
-
         </div>
 
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa02.jpeg" alt="Projeto 1">
-
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa02.jpeg')">
+            <img src="PrimeiraEtapa02.jpeg" alt="Projeto 2">
         </div>
 
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa03.jpeg" alt="Projeto 1">
-
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa03.jpeg')">
+            <img src="PrimeiraEtapa03.jpeg" alt="Projeto 3">
         </div>
 
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa04.jpeg" alt="Projeto 1">
-
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa04.jpeg')">
+            <img src="PrimeiraEtapa04.jpeg" alt="Projeto 4">
         </div>
 
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa05.jpeg" alt="Projeto 1">
-
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa05.jpeg')">
+            <img src="PrimeiraEtapa05.jpeg" alt="Projeto 5">
         </div>
 
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa06.jpeg" alt="Projeto 1">
-
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa06.jpeg')">
+            <img src="PrimeiraEtapa06.jpeg" alt="Projeto 6">
         </div>
-        <div class="portfolio-item">
-            <img src="PrimeiraEtapa07.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('PrimeiraEtapa07.jpeg')">
+            <img src="PrimeiraEtapa07.jpeg" alt="Projeto 7">
         </div>
-        <div class="portfolio-item">
-            <img src="SegundaEtapa01.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('SegundaEtapa01.jpeg')">
+            <img src="SegundaEtapa01.jpeg" alt="Projeto 8">
         </div>
-        <div class="portfolio-item">
-            <img src="SegundaEtapa02.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('SegundaEtapa02.jpeg')">
+            <img src="SegundaEtapa02.jpeg" alt="Projeto 9">
         </div>
-        <div class="portfolio-item">
-            <img src="SegundaEtapa03.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('SegundaEtapa03.jpeg')">
+            <img src="SegundaEtapa03.jpeg" alt="Projeto 10">
         </div>
-        <div class="portfolio-item">
-            <img src="SegundaEtapa04.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('SegundaEtapa04.jpeg')">
+            <img src="SegundaEtapa04.jpeg" alt="Projeto 11">
         </div>
-        <div class="portfolio-item">
-            <img src="SegundaEtapa05.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('SegundaEtapa05.jpeg')">
+            <img src="SegundaEtapa05.jpeg" alt="Projeto 12">
         </div>
-        <div class="portfolio-item">
-            <img src="TerceiraParte1.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('TerceiraParte1.jpeg')">
+            <img src="TerceiraParte1.jpeg" alt="Projeto 13">
         </div>
-        <div class="portfolio-item">
-            <img src="TerceiraParte2.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('TerceiraParte2.jpeg')">
+            <img src="TerceiraParte2.jpeg" alt="Projeto 14">
         </div>
-        <div class="portfolio-item">
-            <img src="TerceiraParte3.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('TerceiraParte3.jpeg')">
+            <img src="TerceiraParte3.jpeg" alt="Projeto 15">
         </div>
-        <div class="portfolio-item">
-            <img src="TerceiraParte4.jpeg" alt="Projeto 1">
 
+        <div class="portfolio-item" onclick="openFullscreen('TerceiraParte4.jpeg')">
+            <img src="TerceiraParte4.jpeg" alt="Projeto 16">
         </div>
     </section>
 
+    <script>
+        function openFullscreen(imageSrc) {
+            
+            document.getElementById('fullscreen-image').src = imageSrc;
+            document.getElementById('fullscreen-overlay').style.display = 'block';
+        }
 
+        function closeFullscreen() {
+            
+            document.getElementById('fullscreen-overlay').style.display = 'none';
+        }
+
+
+    </script>
 </body>
 
 </html>

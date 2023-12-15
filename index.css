@@ -22,7 +22,7 @@ body {
     0%,
     100% {
         opacity: 1;
-        background-image: url('img/QuemSomos.jpg');
+        background-image: url('img/index.jpg');
     }
 
     50% {
@@ -94,7 +94,7 @@ ul {
 nav li {
     color: rgb(0, 0, 0);
     font-size: 18px;
-    border: 2px solid #ffffff;
+    border: 2px solid #000000;
     border-radius: 8px;
     padding: 10px 15px;
     margin: 0 5px; /* Adicione margem entre os itens */
@@ -108,6 +108,7 @@ nav li:hover {
 nav a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    font-weight: bold;
     transition: color 0.3s;
 }
 
