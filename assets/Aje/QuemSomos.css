@@ -69,9 +69,18 @@ ul {
     padding: 0;
 }
 
-li {
+nav li {
     color: rgb(0, 0, 0);
     font-size: 18px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 5px; /* Adicione margem entre os itens */
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição suave ao transformar */
+}
+
+nav li:hover {
+    transform: translateY(-5px); /* Mova o item para cima ao passar o mouse */
 }
 
 nav a {
@@ -81,7 +90,8 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(5, 243, 203);
+    color: #00f7ff;
+    border-color: #00f7ff; /* Altere a cor da borda ao passar o mouse */
 }
 
 /* Centralizar os itens no meio da barra de navegação */
@@ -208,22 +218,36 @@ ul {
         font-size: 16px; /* Reduza o tamanho da fonte dos itens do menu */
     }
 
-    .card-section {
-        padding: 0 20px; /* Reduza o padding nas seções de cartão */
-    }
-
-    .card {
-        margin: 0 10px; /* Adicione margem nas laterais dos cartões */
-    }
-
-    .card img {
-        width: 100%;
-        max-width: 450px; /* Ajuste o valor conforme necessário */
-        height: auto;
+    .card-content {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        text-align: center; /* Centraliza o texto */
     }
 
     .card-text {
+        margin-top: 10px;
+        padding: 10px; /* Ajuste conforme necessário */
+    }
+
+    .card-text h3 {
+        font-size: 1.3rem; /* Ajuste o tamanho do texto conforme necessário */
+        margin-bottom: 5px; /* Ajuste conforme necessário */
+    }
+
+    .card-text p {
+        font-size: 1.1rem; /* Ajuste o tamanho do texto conforme necessário */
+    }
+
+
+    .card-text {
         padding: 10px; /* Reduza o padding nas seções de texto */
+    }
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-bar p {
+        margin-right: 0;
+        font-size: 12px; /* Reduz a fonte para economizar espaço */
     }
 
 }

@@ -69,9 +69,18 @@ ul {
     padding: 0;
 }
 
-li {
+nav li {
     color: rgb(0, 0, 0);
     font-size: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 5px; /* Adicione margem entre os itens */
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição suave ao transformar */
+}
+
+nav li:hover {
+    transform: translateY(-5px); /* Mova o item para cima ao passar o mouse */
 }
 
 nav a {
@@ -81,7 +90,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #66ccff;
+    color: #00f7ff;
+    border-color: #00f7ff; /* Altere a cor da borda ao passar o mouse */
 }
 
 /* Centralizar os itens no meio da barra de navegação */
@@ -106,65 +116,6 @@ ul {
 }
 
 
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.left-section {
-    width: 100%;
-}
-
-.middle-section {
-    width: 100%;
-    text-align: center;
-}
-
-.right-section {
-    width: 80%;
-    text-align: right;
-}
-
-.footer-content a {
-    color: white;
-    text-decoration: underline;
-}
-
-.footer-content a:hover {
-    color: #66ccff;
-}
-
-.engenheiro {
-    font-weight: bold;
-}
-
-/* Estilo para as seções de texto */
-.footer-content p {
-    margin: 10px 0; /* Ajuste a margem conforme necessário */
-}
-
-/* Adiciona classe para mostrar o footer */
-.footer-show {
-    opacity: 1;
-}
 
 .portfolio {
     display: flex;
@@ -208,3 +159,55 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+
+/* Adicione a media query para telas menores */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Evita a rolagem horizontal em telas menores */
+    }
+
+    .background {
+        background-size: cover; /* Ajuste conforme necessário */
+        background-position: center;
+        background-attachment: fixed;
+        display: block; /* Garante que o background seja exibido em telas menores */
+    }
+
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-bar p {
+        margin-right: 0;
+        font-size: 12px; /* Reduz a fonte para economizar espaço */
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav img {
+        max-width: 100%; /* Garante que a imagem do logo não ultrapasse a largura da tela */
+        margin-right: 0; /* Remove a margem à direita na imagem do logo */
+    }
+
+    ul {
+        gap: 10px;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Alinha os itens ao centro */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .portfolio {
+        margin: 10px;
+    }
+
+    .portfolio-item {
+        width: calc(50% - 20px); /* Alterei para duas colunas em telas menores */
+    }
+
+    .portfolio-item img {
+        max-height: 150px; /* Reduz a altura máxima das imagens nos itens do portfólio */
+    }
+}
+

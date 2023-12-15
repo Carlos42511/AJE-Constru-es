@@ -69,19 +69,29 @@ ul {
     padding: 0;
 }
 
-li {
+nav li {
     color: rgb(0, 0, 0);
     font-size: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 5px; /* Adicione margem entre os itens */
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição suave ao transformar */
+}
+
+nav li:hover {
+    transform: translateY(-5px); /* Mova o item para cima ao passar o mouse */
 }
 
 nav a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #66ccff;
+    color: #00f7ff;
+    border-color: #00f7ff; /* Altere a cor da borda ao passar o mouse */
 }
 
 /* Centralizar os itens no meio da barra de navegação */
@@ -185,12 +195,21 @@ ul {
     .card-text {
         padding: 10px; /* Reduza o padding nas seções de texto */
     }
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-bar p {
+        margin-right: 0;
+        font-size: 12px; /* Reduz a fonte para economizar espaço */
+    }
 
 
 @media (max-width: 768px) {
     .portfolio-item p {
         font-size: 10px; /* Ajuste o tamanho da fonte conforme necessário */
         }
+        
     }
 }
 
