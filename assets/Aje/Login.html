@@ -4,22 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Login.css">
-    
-</head>
 
+    <link rel="stylesheet" href="Login.css">
+ 
+</head>
 
 <body>
 
     <div class="background"></div>
-
-    <div class="top-bar">
-        <p>Número: <a href="tel:+5561995187814">(61) 995187814</a></p>
-        <p>Engenheiro Civil: Eduardo Souza </p>
-        
-        <p>Email: <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a></p>
-    </div>
-
     <nav>
         <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
         <ul>
@@ -31,20 +23,18 @@
         </ul>
     </nav>
 
+    <div class="login-container">
+        <h2 style="color: white;">Login</h2>
+        <form class="login-form">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" pattern="\d{11}" title="Digite exatamente 11 números do seu CPF" placeholder="Digite apenas números" required>
 
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
 
-
-
-    <section class="hero-section">
-        <h1>Bem-Vindo à Pagina será feita em breve !</h1>
-        <h2 style="color: white;">Sua solução completa em construção civil e serviços.</h2>
-        
-    </section>
+            <button type="submit">Entrar</button>
+        </form>
     </div>
-
-
-
-
 
 
 </body>
