@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: changeBackground 20s infinite;
+    /* 20s é a duração da animação, você pode ajustar conforme necessário */
+}
+
+@keyframes changeBackground {
+
+    0%,
+    100% {
+        opacity: 1;
+        background-image: url('../../img/index.jpg');
+    }
+
+    50% {
+        opacity: 1;
+        background-image: url('../../img/Portifolio.jpg');
+    }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none; /* Remova a decoração padrão do link, se desejar */
+}
+
+.top-bar a:hover {
+    text-decoration: underline; /* Adicione um sublinhado ao passar o mouse, se desejar */
+}
+
+.top-bar p {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+
+/* Ajuste a margem do nav para evitar sobreposição com a top-bar */
+nav {
+    margin-top: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 0px;
+}
+
+nav img {
+    max-height: 200px;
+    /* Reduzi a altura para melhor visualização */
+    width: auto;
+    margin-right: 80px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    /* Reduzi o espaçamento entre os itens */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 5px; /* Adicione margem entre os itens */
+    transition: transform 0.3s ease-in-out; /* Adicione uma transição suave ao transformar */
+}
+
+nav li:hover {
+    transform: translateY(-5px); /* Mova o item para cima ao passar o mouse */
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+    border-color: #00f7ff; /* Altere a cor da borda ao passar o mouse */
+}
+
+
+
+
+/* Centralizar os itens no meio da barra de navegação */
+ul {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Adiciona uma media query para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        /* Empilha os itens verticalmente em telas menores */
+        align-items: center;
+        /* Alinha os itens ao centro */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    ul {
+        margin-top: 15px;
+        /* Adiciona um espaçamento superior entre o logo e a lista */
+        gap: 10px;
+        /* Reduz o espaçamento entre os itens empilhados */
+    }
+}
+
+
+
+
+
+
+
+
+.hero-section {
+    text-align: center;
+    color: #000000;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3385c6;
+}
+
+
+
+
+
+/* Adicione essas regras no final do seu arquivo CSS */
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    nav img {
+        margin-right: 0;
+        /* Remova a margem à direita na versão móvel */
+    }
+
+    nav {
+        padding: 15px;
+        /* Adicione um espaçamento interno para melhorar a usabilidade em telas menores */
+    }
+
+    ul {
+        gap: 10px;
+        /* Espaçamento entre os itens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        /* Empilha os itens verticalmente em telas menores */
+        gap: 10px;
+        /* Espaçamento entre os itens */
+    }
+
+    nav li {
+        font-size: 16px;
+        /* Reduza o tamanho da fonte dos itens do menu */
+    }
+
+    .background {
+        background-attachment: scroll;
+        /* Altere para scroll para permitir o movimento do background */
+    }
+
+    .hero-section {
+        padding: 80px 20px;
+        /* Reduza o padding na seção de herói para telas menores */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        /* Ajuste o tamanho do texto conforme necessário */
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        /* Ajuste o tamanho do texto conforme necessário */
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        /* Ajuste o padding do botão */
+        font-size: 0.9rem;
+        /* Ajuste o tamanho da fonte do botão */
+    }
+
+    .card-section {
+        padding: 0 10px;
+        /* Reduza o padding nas seções de cartão */
+        margin-bottom: 60px;
+        /* Ajuste conforme necessário para garantir o espaçamento adequado */
+    }
+
+    .card {
+        margin: 0 10px;
+        /* Adicione margem nas laterais dos cartões */
+    }
+
+    .card img {
+        max-width: 100%;
+        /* Faça a imagem ocupar 100% da largura do contêiner */
+    }
+
+    .card-text {
+        padding: 10px;
+        /* Reduza o padding nas seções de texto */
+    }
+
+    footer {
+        position: static;
+        /* Altere para position: static para evitar sobreposição com o conteúdo */
+        margin-top: 20px;
+        /* Adicione uma margem superior para separar do conteúdo */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha as seções do rodapé em telas menores */
+    }
+
+    .right-section {
+        text-align: center;
+        /* Alinhe o texto à direita para o centro */
+        width: 100%;
+        margin-top: 10px;
+        /* Adicione uma margem superior */
+    }
+    .top-bar {
+        padding: 10px;
+    }
+
+    .top-bar p {
+        margin-right: 0;
+        font-size: 12px; /* Reduz a fonte para economizar espaço */
+    }
+}
