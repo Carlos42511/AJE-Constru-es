@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Singin.css">
+
+    <title>Bem-vindo</title>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <nav>
+        <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
+        <ul>
+            <li><a href="../../index.html"> Home</a></li>
+            <li><a href="QuemSomos.html">Quem Somos</a></li>
+            <li><a href="Portifolio.html">Portfólio</a></li>
+            <li><a href="FaleConosco.html">Fale Conosco</a></li>
+            <li><a href="Login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="perfil">
+            <div class="perfil-img-container">
+                <img src="../../img/ENG.jpg" alt="Imagem do perfil" class="perfil-img">
+            </div>
+            <h2 style="color: rgb(0, 0, 0); font-weight: bold;">Eduardo de Souza</h2>
+        </div>
+
+        <div class="painel">
+            <h3>Painel do Funcionário</h3>
+            
+            <ul class="opcoes">
+                <li><a href="#" onclick="toggleMiniAba('fgts')">Anexar FGTS</a></li>
+                <div class="mini-aba" id="fgtsMiniAba">
+                    <img src="../../img/comprovantefgts.jpg" alt="Imagem FGTS">
+                </div>
+
+                <li><a href="#" onclick="toggleMiniAba('comprovante')">Comprovante de Pagamento</a></li>
+                <div class="mini-aba" id="comprovanteMiniAba">
+                    <img src="../../img/comprovantepagamento.jpeg" alt="Imagem Comprovante">
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <script src="Singin.js"></script>
+
+    <script>
+        function toggleMiniAba(abaId) {
+            var miniAba = document.getElementById(abaId + 'MiniAba');
+            miniAba.style.display = miniAba.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+
+</html>
