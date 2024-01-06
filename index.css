@@ -22,13 +22,10 @@ body {
     0%,
     100% {
         opacity: 1;
-        background-image: url('img/index.jpg');
+        background-image: url('img/login.jpg');
     }
 
-    50% {
-        opacity: 1;
-        background-image: url('img/Portifolio.jpg');
-    }
+ 
 }
 
 .top-bar {
@@ -107,7 +104,7 @@ nav li:hover {
 
 nav a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: bold;
     transition: color 0.3s;
 }

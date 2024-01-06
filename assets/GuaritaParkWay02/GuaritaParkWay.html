@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GuaritaParkWay.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="top-bar">
+        <p>Número: <a href="tel:+5561995187814">(61) 995187814</a></p>
+        <p>Engenheiro Civil: Eduardo Souza </p>
+        
+        <p>Email: <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a></p>
+    </div>
+
+    <nav>
+        <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
+        <ul>
+            <li><a href="../../Index.html"> Home</a></li>
+            <li><a href="../Aje/QuemSomos.html">Quem Somos</a></li>
+            <li><a href="../Aje/Portifolio.html">Portfólio</a></li>
+            <li><a href="../Aje/FaleConosco.html">Fale Conosco</a></li>
+        </ul>
+    </nav>
+
+    <div id="fullscreen-overlay">
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+        <button id="close-button" onclick="closeFullscreen()">VOLTAR</button>
+    </div>
+    
+
+    <section class="portfolio">
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 01.jpeg')">
+            <img src="Guarita 01.jpeg" alt="Projeto 1">
+        </div>
+
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 02.jpeg')">
+            <img src="Guarita 02.jpeg" alt="Projeto 2">
+        </div>
+
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 03.jpeg')">
+            <img src="Guarita 03.jpeg" alt="Projeto 3">
+        </div>
+
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 04.jpeg')">
+            <img src="Guarita 04.jpeg" alt="Projeto 4">
+        </div>
+
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 05.jpeg')">
+            <img src="Guarita 05.jpeg" alt="Projeto 5">
+        </div>
+
+        <div class="portfolio-item" onclick="openFullscreen('Guarita 06.jpeg')">
+            <img src="Guarita 06.jpeg" alt="Projeto 6">
+        </div>
+
+    
+
+    </section>
+
+    <script>
+        function openFullscreen(imageSrc) {
+            
+            document.getElementById('fullscreen-image').src = imageSrc;
+            document.getElementById('fullscreen-overlay').style.display = 'block';
+        }
+
+        function closeFullscreen() {
+            
+            document.getElementById('fullscreen-overlay').style.display = 'none';
+        }
+
+
+    </script>
+</body>
+
+</html>
