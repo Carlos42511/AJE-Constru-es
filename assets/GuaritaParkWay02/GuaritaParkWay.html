@@ -5,21 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="GuaritaParkWay.css">
+
+
 </head>
 
 <body>
 
     <div class="background"></div>
 
-    <div class="top-bar">
-        <p>Número: <a href="tel:+5561995187814">(61) 995187814</a></p>
-        <p>Engenheiro Civil: Eduardo Souza </p>
-        
-        <p>Email: <a href="mailto:ajeconstrucaoesservicos@gmail.com">ajeconstrucaoesservicos@gmail.com</a></p>
-    </div>
-
     <nav>
-        <img src="../../img/logoaje.jpg" alt="Logo da Empresa">
+        <img src="logoajebranco.png" alt="Logo da Empresa">
         <ul>
             <li><a href="../../index.html"> Home</a></li>
             <li><a href="../Aje/QuemSomos.html">Quem Somos</a></li>
@@ -30,54 +25,117 @@
 
     <div id="fullscreen-overlay">
         <img id="fullscreen-image" src="" alt="Fullscreen Image">
+        <button id="prev-button" class="nav-button" onclick="navigateFullscreen(-1)">&lt;</button>
+        <button id="next-button" class="nav-button" onclick="navigateFullscreen(1)">&gt;</button>
         <button id="close-button" onclick="closeFullscreen()">VOLTAR</button>
     </div>
-    
 
-    <section class="etapa" id="etapa1" >
-        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px" >Serviço de Construção </h2>
-        <div class="portfolio" >
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 01.jpeg')">
-            <img src="Guarita 01.jpeg" alt="Projeto 1">
+    <section class="etapa" id="etapa1">
+        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px">Serviço de
+            Construção </h2>
+        <div class="portfolio">
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 04.jpeg', 0)">
+                <img src="Guarita 04.jpeg" alt="Projeto 1">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 02.jpeg', 1)">
+                <img src="Guarita 02.jpeg" alt="Projeto 2">
+            </div>
+
+            <!-- Adicione os índices corretos para os outros itens -->
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 03.jpeg', 2)">
+                <img src="Guarita 03.jpeg" alt="Projeto 3">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 01.jpeg', 3)">
+                <img src="Guarita 01.jpeg" alt="Projeto 4">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 05.jpeg', 4)">
+                <img src="Guarita 05.jpeg" alt="Projeto 5">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita 06.jpeg', 5)">
+                <img src="Guarita 06.jpeg" alt="Projeto 6">
+            </div>
         </div>
+    </section>
 
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 02.jpeg')">
-            <img src="Guarita 02.jpeg" alt="Projeto 2">
+    <section class="etapa" id="etapa1">
+        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px">Serviço Chapisco
+            Colocação de Tela </h2>
+        <div class="portfolio">
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 01.jpeg', 6)">
+                <img src="Guarita Parte 2 01.jpeg" alt="Projeto 13">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 02.jpeg', 7)">
+                <img src="Guarita Parte 2 02.jpeg" alt="Projeto 14">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 03.jpeg', 8)">
+                <img src="Guarita Parte 2 03.jpeg" alt="Projeto 15">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 04.jpeg', 9)">
+                <img src="Guarita Parte 2 04.jpeg" alt="Projeto 16">
+            </div>
+
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 05.jpeg', 10)">
+                <img src="Guarita Parte 2 05.jpeg" alt="Projeto 18">
+            </div>
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 06.jpeg', 11)">
+                <img src="Guarita Parte 2 06.jpeg" alt="Projeto 19">
+            </div>
+            <div class="portfolio-item" onclick="openFullscreen('Guarita Parte 2 07.jpeg', 12)">
+                <img src="Guarita Parte 2 07.jpeg" alt="Projeto 20">
+            </div>
         </div>
-
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 03.jpeg')">
-            <img src="Guarita 03.jpeg" alt="Projeto 3">
-        </div>
-
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 04.jpeg')">
-            <img src="Guarita 04.jpeg" alt="Projeto 4">
-        </div>
-
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 05.jpeg')">
-            <img src="Guarita 05.jpeg" alt="Projeto 5">
-        </div>
-
-        <div class="portfolio-item" onclick="openFullscreen('Guarita 06.jpeg')">
-            <img src="Guarita 06.jpeg" alt="Projeto 6">
-        </div>
-
-    
-
     </section>
 
     <script>
-        function openFullscreen(imageSrc) {
-            
+        function openFullscreen(imageSrc, index) {
+            currentIndex = index;
+            imageSources = getImageSources();
             document.getElementById('fullscreen-image').src = imageSrc;
             document.getElementById('fullscreen-overlay').style.display = 'block';
+            updateNavigationButtons();
         }
 
         function closeFullscreen() {
-            
             document.getElementById('fullscreen-overlay').style.display = 'none';
         }
 
+        function navigateFullscreen(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = imageSources.length - 1;
+            } else if (currentIndex >= imageSources.length) {
+                currentIndex = 0;
+            }
+            document.getElementById('fullscreen-image').src = imageSources[currentIndex];
+            updateNavigationButtons();
+        }
 
+        function getImageSources() {
+            return Array.from(document.querySelectorAll('.portfolio-item img')).map(img => img.src);
+        }
+
+        function updateNavigationButtons() {
+            var prevButton = document.getElementById('prev-button');
+            var nextButton = document.getElementById('next-button');
+            prevButton.removeAttribute('disabled');
+            nextButton.removeAttribute('disabled');
+
+            if (currentIndex === 0) {
+                prevButton.setAttribute('disabled', 'true');
+            }
+            if (currentIndex === imageSources.length - 1) {
+                nextButton.setAttribute('disabled', 'true');
+            }
+        }
     </script>
 </body>
 
