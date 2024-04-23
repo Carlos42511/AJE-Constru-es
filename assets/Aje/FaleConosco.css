@@ -5,7 +5,7 @@ body {
 
 .background {
   /* Adicione as propriedades de background desejadas */
-  background-image: url('../../img/BAKCKS.jpg');
+  background-image: url('../../img/index.jpg');
   background-size: cover;
   /* Ajuste conforme necessário */
   background-position: center;
@@ -92,7 +92,7 @@ nav li:hover {
 
 nav a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   transition: color 0.3s;
 }

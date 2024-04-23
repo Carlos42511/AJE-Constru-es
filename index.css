@@ -14,19 +14,21 @@ body {
     height: 100%;
     z-index: -1;
     animation: changeBackground 20s infinite;
-    /* 20s é a duração da animação, você pode ajustar conforme necessário */
+    transition: background-image 0.5s ease-in-out; /* Adicione uma transição suave */
 }
 
 @keyframes changeBackground {
-
-    0%,
-    100% {
+    0%, 50% {
         opacity: 1;
-        background-image: url('img/login.jpg');
+        background-image: url('img/index.jpg');
     }
-
- 
+    
+    50%, 100% {
+        opacity: 1;
+        background-image: url('img/QuemSomos.jpg');
+    }
 }
+
 
 .top-bar {
     display: flex;
@@ -166,6 +168,11 @@ ul {
     margin-bottom: 30px;
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+}
+
 .cta-button {
     display: inline-block;
     background-color: #ffffff;
@@ -175,11 +182,13 @@ ul {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin: 0 10px; /* Adicione margem entre os botões */
 }
 
 .cta-button:hover {
     background-color: #3385c6;
 }
+
 
 
 
