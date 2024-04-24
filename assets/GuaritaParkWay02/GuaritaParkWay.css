@@ -4,7 +4,7 @@ body {
 }
 
 .background {
-    background-image: url('pexels-rodolfo-quirós-2219024.jpg');
+    background-color: black;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -16,36 +16,9 @@ body {
     z-index: -1;
 }
 
-.top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.top-bar a {
-    color: white;
-    text-decoration: none;
-}
-
-.top-bar a:hover {
-    text-decoration: underline;
-}
-
-.top-bar p {
-    margin: 0;
-    font-size: 14px;
-}
 
 nav {
+    background-image: url('../../img/QuemSomos.jpg');
     display: flex;
     justify-content: space-between;
     align-items: center;

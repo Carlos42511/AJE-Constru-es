@@ -30,36 +30,6 @@ body {
 }
 
 
-.top-bar {
-    display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.top-bar a {
-    color: white;
-    text-decoration: none; /* Remova a decoração padrão do link, se desejar */
-}
-
-.top-bar a:hover {
-    text-decoration: underline; /* Adicione um sublinhado ao passar o mouse, se desejar */
-}
-
-.top-bar p {
-    margin: 0;
-    margin-right: 20px;
-    font-size: 14px;
-}
-
 
 /* Ajuste a margem do nav para evitar sobreposição com a top-bar */
 nav {
@@ -152,6 +122,8 @@ ul {
 
 
 
+
+
 .hero-section {
     text-align: center;
     color: #000000;
@@ -188,6 +160,39 @@ ul {
 .cta-button:hover {
     background-color: #3385c6;
 }
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Mudei de center para flex-start para corrigir alinhamento */
+    margin: 20px;
+}
+
+.portfolio-item {
+    box-sizing: border-box; /* Adicionei essa propriedade para corrigir o tamanho total do card */
+    margin: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(33.33% - 20px); /* Alterei para uma largura relativa, ajustável conforme necessário */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px;
+}
+
 
 
 
