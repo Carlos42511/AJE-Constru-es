@@ -237,3 +237,28 @@ ul {
     width: 100%; /* Preenche o contêiner */
     height: auto;
 }
+
+.video-wrapper {
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    width: calc(50% - 20px); /* Divide a largura em duas colunas */
+    display: inline-block; /* Adiciona a propriedade de display inline-block para que os vídeos sejam exibidos lado a lado */
+    vertical-align: top; /* Alinha os vídeos na parte superior */
+}
+
+
+.video-container {
+    max-width: 50%; /* Ajusta o tamanho máximo do contêiner de vídeo */
+    max-height: 200px; /* Ajusta a altura máxima do contêiner de vídeo */
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.video-container video {
+    width: 80%; /* Preenche o contêiner de vídeo */
+    height: auto;
+}
+
+
