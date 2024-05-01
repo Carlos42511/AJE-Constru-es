@@ -29,20 +29,37 @@
     </div>
 
     <section class="etapa" id="etapa1">
-        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px">Area Externa da Casa </h2>
+        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px">Area Externa da
+            Casa </h2>
         <div class="portfolio">
-
-
             <div class="portfolio-item" onclick="openFullscreen('Casa01.jpg', 0)">
                 <img src="Casa01.jpg" alt="Projeto 1">
             </div>
-
             <div class="portfolio-item" onclick="openFullscreen('Casa02.jpg', 1)">
                 <img src="Casa02.jpg" alt="Projeto 2">
             </div>
-
-
     </section>
+
+    <section class="etapa" id="etapa1">
+        <h2 style="text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px">Area da
+            Piscina </h2>
+        <div class="portfolio">
+            <div class="portfolio-item" onclick="openFullscreen('Piscina.jpg', 2)">
+                <img src="Piscina.jpg" alt="Projeto 3">
+            </div>
+            <div class="portfolio-item" onclick="openFullscreen('piscina03.jpg', 3)">
+                <img src="piscina03.jpg" alt="Projeto 4">
+            </div>
+            <div class="portfolio-item" onclick="openFullscreen('piscina04.jpg', 4)">
+                <img src="piscina04.jpg" alt="Projeto 5">
+            </div>
+            <div class="portfolio-item" onclick="openFullscreen('piscina02.jpg', 6)">
+                <img src="piscina02.jpg" alt="Projeto 7">
+            </div>
+    </section>
+
+
+
 
     <script>
         function openFullscreen(imageSrc, index) {
@@ -85,7 +102,29 @@
                 nextButton.setAttribute('disabled', 'true');
             }
         }
+
+        // Função para alternar entre o modo de tela cheia do vídeo
+        function toggleFullscreen(video) {
+            if (!document.fullscreenElement) {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) { /* Safari */
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) { /* IE11 */
+                    video.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE11 */
+                    document.msExitFullscreen();
+                }
+            }
+        }
     </script>
+
 </body>
 
 </html>

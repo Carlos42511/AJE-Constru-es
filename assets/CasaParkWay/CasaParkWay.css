@@ -155,7 +155,7 @@ ul {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    max-height: 200px;
+    max-height: 400px;
     object-fit: cover;
 }
 
@@ -223,4 +223,17 @@ ul {
 
 #next-button {
     right: 10px;
+}
+
+.video-container {
+    max-width: calc(33.33% - 20px); /* A mesma largura dos itens de imagem */
+    max-height: 200px; /* A mesma altura máxima que você está aplicando às imagens */
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.video-container video {
+    width: 100%; /* Preenche o contêiner */
+    height: auto;
 }
